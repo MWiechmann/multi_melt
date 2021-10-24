@@ -3,7 +3,7 @@ A data wrangling tool to automatize complex series of pandas melt function calls
 
 ## What is this for?
 I often have to work data-pipelines maintained by others that require files to enter in a specific format. 
-The source data often starts with a suboptimal formatting in wide and must be restructured to enter the data warehouse with a specific (somewhat esoteric) format in long form.
+The source data often starts with a suboptimal formatting in wide form and must be restructured to enter the data warehouse with a specific (somewhat esoteric) format in long form.
 This requires a somewhat complex series of pandas.melt function calls. This tool is intended to automatize this process somewhat.
 
 ### Example datafile
