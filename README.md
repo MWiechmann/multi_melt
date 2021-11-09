@@ -27,4 +27,10 @@ This file then has to be restructured the following way:
 
 Confusing, I know! Which is why I want to automatize this process.
 
-What happens here is that the data is reshaped from wide to long, but in a somewhat complex way. There are a couple of fixed variable (Uuid, Date, Weight_tracking, Country), and two "groups" of variables that get reshaped. The first group are the variables from QFOODETAILS_foo1nm to VQ_foobarfoo15f20. The second group are the variables from QFOODETAILSBARnm to VQ_foobarbarfoosBARf20. Note that these variables do not simply follow the scheme _prefix + number_, but instead follow a scheme like _prefix + number + suffix_ (example: _VQ_foobarfoo + number + f1_).
+#### What is happening here?
+The data is reshaped from wide to long, but in a somewhat complex way. There are a couple of fixed variable (Uuid, Date, Weight_tracking, Country), and two "groups" of variables that get reshaped. The first group are the variables from QFOODETAILS_foo1nm to VQ_foobarfoo15f20. The second group are the variables from QFOODETAILSBARnm to VQ_foobarbarfoosBARf20. Note that these variables do not simply follow the scheme _prefix + number_, but instead follow a scheme like _prefix + number + suffix_ (example: _VQ_foobarfoo + number + f1_). To complicate things, _some_ variables from the second group get summarized with variables from the first group. So there are some variables that are reshaped across groups, while others are only reshaped within groups.
+
+This can be achieved by running a series of `pandas.melt()` function calls. To make the whole process faster and easier this script automatizes this process
+
+## How to use multi_melt
+...WIP
